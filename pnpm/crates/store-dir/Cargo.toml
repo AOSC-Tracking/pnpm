@@ -42,7 +42,7 @@ url = { workspace = true }
 # Non-MSVC Windows (e.g. windows-gnu via mingw) would work, but we
 # build with MSVC in CI so gate it off there specifically.
 [target.'cfg(not(target_env = "msvc"))'.dependencies]
-sha2 = { workspace = true, features = ["asm"] }
+sha2 = { workspace = true }
 
 [target.'cfg(windows)'.dependencies]
 windows-sys = { workspace = true, features = ["Win32_Storage_FileSystem"] }
